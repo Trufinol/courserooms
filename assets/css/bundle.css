@@ -1032,6 +1032,8 @@ img {
   align-items: center;
 }
 
+.header .avatar,
+.header .profile,
 .header nav,
 .header ul {
   display: inline-block;
@@ -1151,4 +1153,16 @@ img {
 .currency .c-down {
   margin-left: 5px;
   font-size: 12px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  overflow: hidden;
+  color: #fff;
+  background-color: #d7d7d7;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
 }
