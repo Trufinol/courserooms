@@ -5,7 +5,7 @@ var concatCss = require('gulp-concat-css');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('browser-sync', function() { 
+gulp.task('browser-sync', function() {
     browserSync({
       server: {
           baseDir: "./",
@@ -24,7 +24,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('css', function () {
 
-	return gulp.src('./assets/scss/*.scss')
+	return gulp.src('./assets/scss/**/*.scss')
 	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 	.pipe(autoprefixer({
 		browsers: ['last 2 versions'],

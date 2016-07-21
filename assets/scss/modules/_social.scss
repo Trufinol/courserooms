@@ -1,0 +1,43 @@
+.social {
+padding: 0 35px;
+}
+.social__list {
+  display: inline-block;
+}
+.social__list__link {
+  color: #fff;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.in {
+    background-color: $color-in;
+}
+.fb {
+    background-color: $color-fb;
+    margin: 0 10px;
+}
+.tw {
+    background-color: $color-tw;
+}
+.search {
+  font-size: 15px;
+  font-family: "Cabin";
+  font-weight: bold;
+  width: 290px;
+  padding: 8px 35px 8px 15px;
+  border: 1px solid #8cd8cb;
+  border-radius: 5px;
+  background: url(/assets/img/search.svg) no-repeat;
+  background-size: 22px;
+  background-position: 305px;
+}

@@ -1,0 +1,27 @@
+.header {
+    width: 100%;
+    background-color: #fff;
+    font-family: 'Cabin', sans-serif;
+    height: 72px;
+    box-shadow: 2px 0 8px rgba(#000, 0.3);
+    display: flex;
+    align-items: center;
+    // flex-wrap: nowrap;
+    nav,
+    ul {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    nav {
+        margin-left: auto;
+    }
+    .logo {
+        display: inline-block;
+        margin-left: 35px;
+        width: 220px;
+    }
+}
+.nav li {
+    display: inline-block;
+    vertical-align: middle;
+}
