@@ -1,7 +1,10 @@
-@import "https://fonts.googleapis.com/css?family=Cabin:500,700|Lato:300,400|Source+Sans+Pro:400,700&subset=latin-ext";
+@import "https://fonts.googleapis.com/css?family=Cabin:400,500,700,800|Lato:300,400|Source+Sans+Pro:400,700&subset=latin-ext";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css";
-body {
+* {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
   width: 100%;
 }
@@ -26,6 +29,10 @@ img {
 
 ul {
   padding-left: 0;
+}
+
+button {
+  border: none;
 }
 
 .container {
@@ -1044,8 +1051,8 @@ ul {
 
 .header .avatar,
 .header .profile,
-.header nav,
-.header ul {
+.header .nav-menu,
+.header .acc-menu {
   display: inline-block;
   vertical-align: middle;
 }
@@ -1064,15 +1071,21 @@ ul {
   vertical-align: middle;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Cabin";
+}
+
 .social {
   padding: 0 35px;
 }
 
-.social__list {
+.social__li {
   display: inline-block;
 }
 
-.social__list__link {
+.social__li__link {
   color: #fff;
   display: block;
   width: 25px;
@@ -1082,15 +1095,21 @@ ul {
   text-align: center;
 }
 
-.social__list__link i {
+.social__li__link:before {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-family: "FontAwesome";
+  font-size: 17px;
+  color: #fff;
 }
 
 .in {
   background-color: #0177b5;
+}
+
+.in:before {
+  content: "\f0e1";
+  left: 6px;
+  top: 3px;
 }
 
 .fb {
@@ -1098,8 +1117,20 @@ ul {
   margin: 0 10px;
 }
 
+.fb:before {
+  content: "\f09a";
+  left: 8px;
+  top: 4px;
+}
+
 .tw {
   background-color: #5ea9dd;
+}
+
+.tw:before {
+  content: "\f099";
+  left: 5px;
+  top: 3px;
 }
 
 .search {
@@ -1165,7 +1196,6 @@ ul {
 }
 
 .avatar {
-  cursor: pointer;
   height: 50px;
   width: 50px;
   margin-left: 20px;
@@ -1179,8 +1209,11 @@ ul {
 }
 
 .avatar .c-down {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
   top: 15px;
-  right: -12px;
+  right: -20px;
   position: absolute;
   color: #393941;
   font-size: 12px;
@@ -1191,13 +1224,13 @@ ul {
 }
 
 .profile-menu {
-  display: none;
   position: absolute;
   top: 42px;
   right: -10px;
   background-color: #fff;
   border: 1px solid #d2d8d6;
   border-radius: 5px 0 5px 5px;
+  box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.1);
 }
 
 .profile-menu:before {
@@ -1263,4 +1296,125 @@ ul {
   content: "\f08b";
   font-size: 25px;
   line-height: 0.8;
+}
+
+.courses .total-results {
+  font-weight: 400;
+  color: #8c959b;
+  font-size: 18px;
+}
+
+.course-card {
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #f1f1f1;
+}
+
+.course-card__img {
+  position: relative;
+}
+
+.course-card__img__info {
+  position: absolute;
+  bottom: -18px;
+  height: 22px;
+  width: 100%;
+  background-color: #4e5e6a;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.stars {
+  margin: 0;
+  float: left;
+  color: #fff;
+  height: 100%;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.stars ._active {
+  color: #fcef00;
+}
+
+.stars .star {
+  cursor: pointer;
+  display: inline;
+  vertical-align: middle;
+}
+
+.taking {
+  font-size: 12px;
+  color: #fff;
+}
+
+.taking-number {
+  font-size: 12px;
+  font-weight: 800;
+  padding-right: 35px;
+}
+
+.taking-number:before {
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  font-family: "FontAwesome";
+  font-size: 14px;
+  color: #ff809b;
+  content: "\f007";
+}
+
+.course-card__info {
+  padding: 15px;
+}
+
+.course-card__info__row {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.info-headl {
+  font-size: 12px;
+  color: #4e5e6a;
+  margin: 13px 0 5px;
+}
+
+.info-text {
+  color: #2e2e37;
+}
+
+.info-text,
+.info-title {
+  margin: 0 0 12px;
+}
+
+.green {
+  color: #22baa0;
+}
+
+.price {
+  font-size: 15px;
+  color: #ff809b;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.price .value {
+  font-size: 30px;
+  margin-right: 15px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.take-course {
+  background-color: #22baa0;
+  color: #fff;
+  font-size: 16px;
+  width: 135px;
+  height: 30px;
+  border-radius: 4px;
+  margin-bottom: 7px;
 }

@@ -1,43 +1,58 @@
 .social {
-padding: 0 35px;
+    padding: 0 35px;
 }
-.social__list {
-  display: inline-block;
+.social__li {
+    display: inline-block;
 }
-.social__list__link {
-  color: #fff;
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  position: relative;
-  text-align: center;
-  i {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.social__li__link {
+    color: #fff;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    &:before {
+        position: absolute;
+        font-family: "FontAwesome";
+        font-size: 17px;
+        color: #fff;
+    }
 }
 .in {
     background-color: $color-in;
+    &:before {
+        content: "\f0e1";
+        left: 6px;
+        top: 3px;
+    }
 }
 .fb {
     background-color: $color-fb;
     margin: 0 10px;
+    &:before {
+        content: "\f09a";
+        left: 8px;
+        top: 4px;
+    }
 }
 .tw {
     background-color: $color-tw;
+    &:before {
+        content: "\f099";
+        left: 5px;
+        top: 3px;
+    }
 }
 .search {
-  font-size: 15px;
-  font-family: "Cabin";
-  font-weight: bold;
-  width: 290px;
-  padding: 8px 35px 8px 15px;
-  border: 1px solid #8cd8cb;
-  border-radius: 5px;
-  background: url(/assets/img/search.svg) no-repeat;
-  background-size: 22px;
-  background-position: 305px;
+    font-size: 15px;
+    font-family: "Cabin";
+    font-weight: bold;
+    width: 290px;
+    padding: 8px 35px 8px 15px;
+    border: 1px solid #8cd8cb;
+    border-radius: 5px;
+    background: url("/assets/img/search.svg") no-repeat;
+    background-size: 22px;
+    background-position: 305px;
 }

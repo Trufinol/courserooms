@@ -1,0 +1,100 @@
+.courses {
+    .total-results {
+        font-weight: 400;
+        color: #8c959b;
+        font-size: 18px;
+    }
+}
+.course-card {
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #f1f1f1;
+}
+.course-card__img {
+    position: relative;
+}
+.course-card__img__info {
+    position: absolute;
+    bottom: -18px;
+    height: 22px;
+    width: 100%;
+    background-color: $color-dgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.stars {
+    margin: 0;
+    float: left;
+    color: #fff;
+    height: 100%;
+    padding-left: 20px;
+    font-size: 12px;
+    ._active {
+        color: #fcef00;
+    }
+    .star {
+        cursor: pointer;
+        display: inline;
+        vertical-align: middle;
+    }
+}
+.taking {
+    font-size: 12px;
+    color: #fff;
+}
+.taking-number {
+    font-size: 12px;
+    font-weight: 800;
+    padding-right: 35px;
+    &:before {
+        position: absolute;
+        top: 3px;
+        right: 20px;
+        font-family: "FontAwesome";
+        font-size: 14px;
+        color: $color-pink;
+        content: "\f007";
+    }
+}
+.course-card__info {
+    padding: 15px;
+}
+.course-card__info__row {
+    border-bottom: 1px solid #f1f1f1;
+}
+.info-headl {
+    font-size: 12px;
+    color: $color-dgray;
+    margin: 13px 0 5px;
+}
+.info-text {
+    color: $color-black;
+}
+.info-text, .info-title {
+    margin: 0 0 12px;
+}
+.green {
+  color: $color-green;
+}
+.price {
+    font-size: 15px;
+    color: $color-pink;
+    display: inline-block;
+    vertical-align: middle;
+    .value {
+        font-size: 30px;
+        margin-right: 15px;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+}
+.take-course {
+  background-color: $color-green;
+  color: #fff;
+  font-size: 16px;
+  width: 135px;
+  height: 30px;
+  border-radius: 4px;
+margin-bottom: 7px;
+}
