@@ -19,7 +19,7 @@ gulp.task('browser-sync', function() {
 
   gulp.task('html', function(){
   gulp.src('/main.html')
-  .pipe(reload({stream:true}));
+  .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('css', function () {
@@ -37,7 +37,7 @@ gulp.task('css', function () {
 
 gulp.task('watch', function () {
 	gulp.watch('./assets/scss/**/*.scss', ['css'])
-  gulp.watch('/main.html', ['html']);
+  gulp.watch('/*.html', ['html']);
 });
 
 gulp.task('default', ['browser-sync','watch']);

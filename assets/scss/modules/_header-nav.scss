@@ -45,8 +45,10 @@
     }
 }
 .avatar {
+  cursor: pointer;
   height: 50px;
   width: 50px;
+  margin-left: 20px;
   font-size: 50px;
   overflow: hidden;
   color: #fff;
@@ -55,6 +57,48 @@
   text-align: center;
   vertical-align: middle;
 }
-.profile-menu {}
-.profile__item {}
-.profile__item__link{}
+.profile {
+  position: relative;
+}
+.profile-menu {
+  position: absolute;
+  right: 30px;
+  border: 1px solid #d2d8d6;
+  border-radius: 5px;
+}
+.profile__item {
+  &:not(:first-child) {
+    border-top: 1px solid #d2d8d6;
+  }
+  }
+.profile__item__link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 48px;
+  width: 215px;
+  padding: 15px 35px 15px 62px;
+  color: $color-black;
+  transition: color .2s ease-out;
+  &:before {
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 20px;
+  left: 20px;
+  color: $color-green;
+}
+&:hover {
+  color: $color-green;
+}
+}
+.p-history:before {
+    content: "\f09d";
+}
+.profile:before {
+    content: "\f0c0";
+}
+.logout:before {
+    content: "\f08b";
+    font-size: 25px;
+    line-height: 0.8;
+}

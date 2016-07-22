@@ -24,6 +24,10 @@ img {
   height: auto;
 }
 
+ul {
+  padding-left: 0;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -1026,10 +1030,16 @@ img {
   font-family: 'Cabin', sans-serif;
   height: 72px;
   box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+}
+
+.header .header-wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+  height: 100%;
+  max-width: 1550px;
+  margin: 0 auto;
 }
 
 .header .avatar,
@@ -1046,7 +1056,6 @@ img {
 
 .header .logo {
   display: inline-block;
-  margin-left: 35px;
   width: 220px;
 }
 
@@ -1156,8 +1165,10 @@ img {
 }
 
 .avatar {
+  cursor: pointer;
   height: 50px;
   width: 50px;
+  margin-left: 20px;
   font-size: 50px;
   overflow: hidden;
   color: #fff;
@@ -1165,4 +1176,56 @@ img {
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile-menu {
+  position: absolute;
+  right: 30px;
+  border: 1px solid #d2d8d6;
+  border-radius: 5px;
+}
+
+.profile__item:not(:first-child) {
+  border-top: 1px solid #d2d8d6;
+}
+
+.profile__item__link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 48px;
+  width: 215px;
+  padding: 15px 35px 15px 62px;
+  color: #2e2e37;
+  transition: color .2s ease-out;
+}
+
+.profile__item__link:before {
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 20px;
+  left: 20px;
+  color: #22baa0;
+}
+
+.profile__item__link:hover {
+  color: #22baa0;
+}
+
+.p-history:before {
+  content: "\f09d";
+}
+
+.profile:before {
+  content: "\f0c0";
+}
+
+.logout:before {
+  content: "\f08b";
+  font-size: 25px;
+  line-height: 0.8;
 }
