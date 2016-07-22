@@ -1038,7 +1038,7 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
-  max-width: 1550px;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -1115,7 +1115,7 @@ ul {
   background-position: 305px;
 }
 
-.nav-menu__list:not(:last-child) {
+.nav-menu__list {
   margin-right: 25px;
 }
 
@@ -1178,15 +1178,50 @@ ul {
   vertical-align: middle;
 }
 
+.avatar .c-down {
+  top: 15px;
+  right: -12px;
+  position: absolute;
+  color: #393941;
+  font-size: 12px;
+}
+
 .profile {
   position: relative;
 }
 
 .profile-menu {
+  display: none;
   position: absolute;
-  right: 30px;
+  top: 42px;
+  right: -10px;
+  background-color: #fff;
   border: 1px solid #d2d8d6;
-  border-radius: 5px;
+  border-radius: 5px 0 5px 5px;
+}
+
+.profile-menu:before {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -14.5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 13px 17px;
+  border-color: transparent transparent #d2d8d6 transparent;
+}
+
+.profile-menu:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -12px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 12px 16px;
+  border-color: transparent transparent #fff transparent;
 }
 
 .profile__item:not(:first-child) {
@@ -1201,7 +1236,7 @@ ul {
   width: 215px;
   padding: 15px 35px 15px 62px;
   color: #2e2e37;
-  transition: color .2s ease-out;
+  transition: color 0.2s ease-out;
 }
 
 .profile__item__link:before {
@@ -1220,7 +1255,7 @@ ul {
   content: "\f09d";
 }
 
-.profile:before {
+.my-profile:before {
   content: "\f0c0";
 }
 
