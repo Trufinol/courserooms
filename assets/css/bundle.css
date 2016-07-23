@@ -1,7 +1,10 @@
-@import "https://fonts.googleapis.com/css?family=Cabin:500,700|Lato:300,400|Source+Sans+Pro:400,700&subset=latin-ext";
+@import "https://fonts.googleapis.com/css?family=Cabin:400,500,700,800|Lato:300,400|Source+Sans+Pro:400,700&subset=latin-ext";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css";
-body {
+* {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
   width: 100%;
 }
@@ -22,6 +25,14 @@ input {
 img {
   width: 100%;
   height: auto;
+}
+
+ul {
+  padding-left: 0;
+}
+
+button {
+  border: none;
 }
 
 .container {
@@ -1021,21 +1032,30 @@ img {
 }
 
 .header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
   width: 100%;
   background-color: #fff;
   font-family: 'Cabin', sans-serif;
   height: 72px;
   box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+}
+
+.header .header-wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+  height: 100%;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .header .avatar,
 .header .profile,
-.header nav,
-.header ul {
+.header .nav-menu,
+.header .acc-menu {
   display: inline-block;
   vertical-align: middle;
 }
@@ -1046,7 +1066,6 @@ img {
 
 .header .logo {
   display: inline-block;
-  margin-left: 35px;
   width: 220px;
 }
 
@@ -1055,15 +1074,21 @@ img {
   vertical-align: middle;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 72px auto 0;
+  font-family: "Cabin";
+}
+
 .social {
   padding: 0 35px;
 }
 
-.social__list {
+.social__li {
   display: inline-block;
 }
 
-.social__list__link {
+.social__li__link {
   color: #fff;
   display: block;
   width: 25px;
@@ -1073,24 +1098,41 @@ img {
   text-align: center;
 }
 
-.social__list__link i {
+.social__li__link:before {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-family: "FontAwesome";
+  font-size: 17px;
+  color: #fff;
 }
 
 .in {
   background-color: #0177b5;
 }
 
+.in:before {
+  content: "\f0e1";
+  left: 6px;
+  top: 3px;
+}
+
 .fb {
   background-color: #3c5a99;
-  margin: 0 10px;
+}
+
+.fb:before {
+  content: "\f09a";
+  left: 8px;
+  top: 4px;
 }
 
 .tw {
   background-color: #5ea9dd;
+}
+
+.tw:before {
+  content: "\f099";
+  left: 5px;
+  top: 3px;
 }
 
 .search {
@@ -1101,12 +1143,55 @@ img {
   padding: 8px 35px 8px 15px;
   border: 1px solid #8cd8cb;
   border-radius: 5px;
-  background: url("../../../../assets/img/search.svg") no-repeat;
+  background: url("../../assets/img/search.svg") no-repeat;
   background-size: 22px;
   background-position: 305px;
 }
 
-.nav-menu__list:not(:last-child) {
+.course-card .social {
+  float: right;
+  padding: 0px 15px;
+  margin: 0 0 10px;
+}
+
+.course-card .social .social__li__link {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  background-color: #f4f4f4;
+  position: relative;
+  text-align: center;
+}
+
+.course-card .social .social__li__link:before {
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 17px;
+}
+
+.course-card .social .in:before {
+  color: #0177b5;
+  content: "\f0e1";
+  left: 6px;
+  top: 3px;
+}
+
+.course-card .social .fb:before {
+  color: #3c5a99;
+  content: "\f09a";
+  left: 8px;
+  top: 4px;
+}
+
+.course-card .social .tw:before {
+  color: #5ea9dd;
+  content: "\f099";
+  left: 5px;
+  top: 3px;
+}
+
+.nav-menu__list {
   margin-right: 25px;
 }
 
@@ -1158,6 +1243,7 @@ img {
 .avatar {
   height: 50px;
   width: 50px;
+  margin-left: 20px;
   font-size: 50px;
   overflow: hidden;
   color: #fff;
@@ -1165,4 +1251,405 @@ img {
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
+}
+
+.avatar .c-down {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: -20px;
+  position: absolute;
+  color: #393941;
+  font-size: 12px;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 42px;
+  right: -10px;
+  background-color: #fff;
+  border: 1px solid #d2d8d6;
+  border-radius: 5px 0 5px 5px;
+  box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.1);
+}
+
+.profile-menu:before {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -14.5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 13px 17px;
+  border-color: transparent transparent #d2d8d6 transparent;
+}
+
+.profile-menu:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -12px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 12px 16px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.profile__item:not(:first-child) {
+  border-top: 1px solid #d2d8d6;
+}
+
+.profile__item__link {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 48px;
+  width: 215px;
+  padding: 15px 35px 15px 62px;
+  color: #2e2e37;
+  transition: color 0.2s ease-out;
+}
+
+.profile__item__link:before {
+  position: absolute;
+  font-family: "FontAwesome";
+  font-size: 20px;
+  left: 20px;
+  color: #22baa0;
+}
+
+.profile__item__link:hover {
+  color: #22baa0;
+}
+
+.p-history:before {
+  content: "\f09d";
+}
+
+.my-profile:before {
+  content: "\f0c0";
+}
+
+.logout:before {
+  content: "\f08b";
+  font-size: 25px;
+  line-height: 0.8;
+}
+
+.courses .total-results {
+  font-weight: 400;
+  color: #8c959b;
+  font-size: 18px;
+}
+
+.course-card {
+  margin-bottom: 35px;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #f1f1f1;
+}
+
+.course-card__img {
+  position: relative;
+}
+
+.course-card__img__info {
+  position: absolute;
+  bottom: -18px;
+  height: 22px;
+  width: 100%;
+  background-color: #4e5e6a;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.stars {
+  margin: 0;
+  float: left;
+  color: #fff;
+  height: 100%;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.stars ._active-star {
+  color: #fcef00;
+}
+
+.stars .star {
+  cursor: pointer;
+  display: inline;
+  vertical-align: middle;
+}
+
+.taking {
+  font-size: 12px;
+  color: #fff;
+}
+
+.taking-number {
+  font-size: 12px;
+  font-weight: 800;
+  padding-right: 35px;
+}
+
+.taking-number:before {
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  font-family: "FontAwesome";
+  font-size: 14px;
+  color: #ff809b;
+  content: "\f007";
+}
+
+.course-card__info {
+  padding: 15px 20px;
+}
+
+.course-card__info__row {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.info-headl {
+  font-size: 12px;
+  color: #4e5e6a;
+  margin: 13px 0 5px;
+}
+
+.info-text {
+  color: #2e2e37;
+}
+
+.info-text,
+.info-title {
+  margin: 0 0 12px;
+}
+
+.green {
+  color: #22baa0;
+}
+
+.price {
+  font-size: 15px;
+  color: #ff809b;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.price:before {
+  content: "$";
+  display: block;
+  position: absolute;
+  left: 7px;
+  top: 33px;
+}
+
+.price .value {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.take-course {
+  cursor: pointer;
+  background-color: #22baa0;
+  color: #fff;
+  font-size: 16px;
+  width: 135px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 1;
+  top: 72px;
+  bottom: 0;
+  width: 220px;
+  min-height: 100vh;
+  background-color: #292933;
+  font-family: 'Lato';
+}
+
+.sidebar .sidebar__list {
+  margin: 0;
+}
+
+.sidebar__item {
+  border-bottom: 1px solid #131d27;
+}
+
+.sidebar__item__link {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  background-color: #2e2e37;
+  transition: color .2s ease, background-color .2s ease;
+}
+
+.sidebar__item__link:hover {
+  background-color: #393941;
+  color: #22baa0;
+}
+
+._active-link {
+  background-color: #393941;
+  color: #22baa0;
+}
+
+.inner-list {
+  position: absolute;
+  top: 0;
+  margin-left: 220px;
+  height: 100%;
+  background-color: #393941;
+  z-index: 1;
+}
+
+.inner-list__item {
+  border-bottom: 1px solid #303036;
+}
+
+.inner__list__item__link {
+  display: block;
+  width: 240px;
+  padding: 12px 20px;
+  color: #fff;
+  transition: color .2s ease;
+}
+
+.inner__list__item__link:hover {
+  color: #22baa0;
+}
+
+.inner-list__item__text {
+  display: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+  margin: 0 20px 12px 20px;
+}
+
+.sidebar-right {
+  position: fixed;
+  z-index: 1;
+  top: 72px;
+  bottom: 0;
+  right: 0;
+  width: 220px;
+  min-height: 100vh;
+  background-color: #4e5e6a;
+  font-family: 'Source Sans Pro';
+  color: #f7f7f7;
+}
+
+.sidebar-right button {
+  background-color: #606e79;
+  border-radius: 3px;
+  color: #f7f7f7;
+}
+
+.category {
+  padding: 20px 10px 30px 30px;
+  border-bottom: 1px solid #838f97;
+}
+
+.hide-sidebar {
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  margin: 10px;
+  float: right;
+  transition: background-color .2s ease;
+}
+
+.hide-sidebar:hover {
+  background-color: #6b7b87;
+}
+
+.category__img-wrap {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.category__name {
+  font-size: 21px;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.category__desc {
+  font-size: 14px;
+  margin: 0;
+}
+
+.salary {
+  position: relative;
+  display: block;
+  width: 160px;
+  height: 55px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-left: 50px;
+}
+
+.salary:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 55px;
+  top: 0;
+  left: 0;
+  background: url("../../assets/img/icons/arrows-sprite.png") no-repeat;
+  border-right: 1px solid #4e5e6a;
+}
+
+.max:before {
+  background-position: 12px 13px;
+}
+
+.min:before {
+  background-position: 12px -42px;
+}
+
+.salary__value {
+  padding-left: 8px;
+  position: relative;
+  font-weight: bold;
+  font-family: "Source Sans Pro";
+}
+
+.salary__value:before {
+  content: "£";
+  position: absolute;
+  left: 18px;
+  top: 4px;
+  font-size: 14px;
+}
+
+.green-bold {
+  color: #22baa0;
+  font-weight: bold;
+  margin: 5px 0;
 }

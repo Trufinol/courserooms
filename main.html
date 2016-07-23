@@ -2,51 +2,609 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CourseRooms</title>
-    <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
-    <link rel="stylesheet" href="assets/css/bundle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CourseRooms</title>
+  <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="assets/css/bundle.css">
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo"><img src="assets/img/logo.png" alt=""></a>
-        <ul class="social">
-            <li class="social__list"><a href="#" class="social__list__link in"><i class="fa fa-linkedin"></i></a></li>
-            <li class="social__list"><a href="#" class="social__list__link fb"><i class="fa fa-facebook"></i></a></li>
-            <li class="social__list"><a href="#" class="social__list__link tw"><i class="fa fa-twitter"></i></a></li>
+  <!--.header-->
+  <header class="header">
+    <div class="header-wrapper">
+      <a href="#" class="logo"><img src="assets/img/logo.png" alt=""></a>
+      <ul class="social">
+        <li class="social__li">
+          <a href="#" class="social__li__link in"></a>
+        </li>
+        <li class="social__li">
+          <a href="#" class="social__li__link fb"></a>
+        </li>
+        <li class="social__li">
+          <a href="#" class="social__li__link tw"></a>
+        </li>
+      </ul>
+      <input type="text" class="search" placeholder="Search courses" />
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li class="nav-menu__list"><a href="№" class="nav-menu__item__link">Browse courses</a></li>
+          <li class="nav-menu__list"><a href="№" class="nav-menu__item__link">My courses</a></li>
+          <li class="nav-menu__list"><a href="№" class="nav-menu__item__link">My wishlist</a></li>
+          <li class="nav-menu__list"><a href="№" class="nav-menu__item__link">Forum</a></li>
         </ul>
-        <input type="text" class="search" placeholder="Search courses" />
-        <nav class="nav">
-            <ul class="nav-menu">
-                <li class="nav-menu__list"><a href="№" class="nav-menu__item__link">Browse courses</a></li>
-                <li class="nav-menu__list"><a href="№" class="nav-menu__item__link">My courses</a></li>
-                <li class="nav-menu__list"><a href="№" class="nav-menu__item__link">My wishlist</a></li>
-                <li class="nav-menu__list"><a href="№" class="nav-menu__item__link">Forum</a></li>
-            </ul>
-            <ul class="acc-menu">
-                <li><a href="#" class="acc-menu__link currency">&#8364;<span class="c-down"><i class="fa fa-caret-down"></i></span></a></li>
-                <li><a href="#" class="acc-menu__link"><i class="fa fa-bell-o"></i></a></li>
-                <li><a href="#" class="acc-menu__link"><i class="fa fa-envelope-o"></i><span class="env-unread">2</span></a></li>
-            </ul>
-        </nav>
-        <div class="profile"><div class="avatar"><i class="fa fa-user"></i></div>
-            <ul class="profile-menu">
-                <li class="profile__item">
-                    <a href="#" class="profile__item__link">Purchase History </a>
-                </li>
-                <li class="profile__item">
-                    <a href="#" class="profile__item__link">My profile</a>
-                </li>
-                <li class="profile__item">
-                    <a href="#" class="profile__item__link">Logout</a>
-                </li>
-            </ul>
-
+        <ul class="acc-menu">
+          <li><a href="#" class="acc-menu__link currency">&#8364;<span class="c-down"><i class="fa fa-caret-down"></i></span></a></li>
+          <li><a href="#" class="acc-menu__link"><i class="fa fa-bell-o"></i></a></li>
+          <li><a href="#" class="acc-menu__link"><i class="fa fa-envelope-o"></i><span class="env-unread">2</span></a></li>
+        </ul>
+      </nav>
+      <div class="profile">
+        <div class="avatar"><i class="fa fa-user"></i>
+          <div class="c-down"><i class="fa fa-caret-down"></i></div>
         </div>
-    </header>
-</body>
+        <ul class="profile-menu">
+          <li class="profile__item">
+            <a href="#" class="profile__item__link p-history">Purchase History </a>
+          </li>
+          <li class="profile__item">
+            <a href="#" class="profile__item__link my-profile">My profile</a>
+          </li>
+          <li class="profile__item">
+            <a href="#" class="profile__item__link logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!--.header-->
+  <!-- .sidebar -->
+  <nav class="sidebar">
+    <ul class="sidebar__list">
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Development</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Business</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">IT Software</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Office Productivity</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Personal Development</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Design</a>
+        <ul class="inner-list">
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Web Design</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores blanditiis, architecto officiis animi.</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Graphic Design</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eaque quia ipsa nostrum.</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Design Tools</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nostrum iusto dolore? Quo.</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">User Experience</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni sapiente laudantium, natus eius.</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Game Designer</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis sit voluptas porro. Blanditiis.</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Design Thinking</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima labore quas sit praesentium!</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">3D &amp; Animation</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut obcaecati fugit ab voluptatem.</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Fashion</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi facilis, id quae eum!</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Architectural Design</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic aspernatur suscipit officiis, minus.</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Interior Design</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni libero quis, eius distinctio.</p>
+          </li>
+          <li class="inner-list__item">
+            <a href="#" class="inner__list__item__link">Other</a>
+            <p class="inner-list__item__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad unde ducimus asperiores, dolor!</p>
+          </li>
+        </ul>
+      </li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Photography</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Lifestyle</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Health &amp; Fitness</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Teacher Training</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Music</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Academics</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Language</a></li>
+      <li class="sidebar__item"><a href="#" class="sidebar__item__link">Test Prep</a></li>
+    </ul>
+  </nav>
+  <!-- .sidebar -->
+  <!-- .sidebar-right -->
+  <aside class="sidebar-right">
+    <button class="hide-sidebar"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></button>
+    <div class="category">
+      <div class="category__img-wrap">
+        <img src="assets/img/icons/question.svg" alt="" />
+      </div>
+      <p class="category__name">Web Design</p>
+      <p class="category__desc">
+        Web design encompasses many different skills and disciplines in the production and maintenance of websites.
+      </p>
+    </div>
+    <div class="category">
+      <div class="category__img-wrap">
+        <img src="assets/img/icons/stats.svg" class="category__img" alt="" />
+      </div>
+        <p class="category__name">Salary stats</p>
+        <button class="salary max">maximum <div class="salary__value">57,500</div></button>
+        <button class="salary min">minimum <div class="salary__value">17,500</div></button>
+      </div>
+      <div class="category">
+        <div class="category__img-wrap">
+          <img src="assets/img/icons/vacancies.svg" class="category__img" alt="" />
+        </div>
+          <p class="category__name">Vacancies</p>
+          <p class="vacancy__name green-bold">Associate Web Designer</p>
+          <p class="category__desc">Yardi Systems, Inc.</p>
+          <p class="vacancy__name green-bold">Web Designer</p>
+          <p class="category__desc">Saint Joseph's University</p>
+          <p class="vacancy__name green-bold">Jr. Web Designer</p>
+          <p class="category__desc">J.Crew Group, Inc.</p>
+        </div>
+      </aside>
+      <!-- .sidebar-right -->
+      <!--.wrapper-->
+      <main class="wrapper">
+        <div class="container-fluid">
+          <div class="col-md-12">
+            <div class="search-courses">
+              <h1 class="search-courses__headline">Search courses: Web design</h1>
+              <div class="search-courses__form clearfix">
+                <div class="col-md-4">1</div>
+                <div class="col-md-4">1</div>
+                <div class="col-md-4">1</div>
+              </div>
+            </div>
+            <div class="courses clearfix">
+              <div class="col-md-12">
+                <p class="total-results"><span class="_results">11980</span> Results</p>
+              </div>
+              <div class="col-md-3 col-sm-4">
+                <!-- .course-card -->
+                <div class="course-card">
+                  <div class="course-card__img">
+                    <img src="assets/img/photoshop.png" alt="">
+                    <div class="course-card__img__info">
+                      <ul class="stars">
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star"><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span class="taking">Taking course: <span class="taking-number">582</span></span>
+                    </div>
+                  </div>
+                  <div class="course-card__info">
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Subject: <span class="info-text">Web Design</span></p>
+                      <p class="info-title">Photoshop for Web Design Beginners</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Type:</p>
+                      <p class="info-text">Standart</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Author:</p>
+                      <p class="info-title green">
+                        Sandra Schmidt
+                      </p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <div class="price">
+                        <span class="value">25</span>
+                        <button class="take-course">Take Course</button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="social">
+                    <li class="social__li">
+                      <a href="#" class="social__li__link in"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link tw"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link fb"></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- .course-card -->
+              </div>
+              <!-- .col-md3 col-sm-4 -->
+              <div class="col-md-3 col-sm-4">
+                <!-- .course-card -->
+                <div class="course-card">
+                  <div class="course-card__img">
+                    <img src="assets/img/photoshop2.png" alt="">
+                    <div class="course-card__img__info">
+                      <ul class="stars">
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star"><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span class="taking">Taking course: <span class="taking-number">35</span></span>
+                    </div>
+                  </div>
+                  <div class="course-card__info">
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Subject: <span class="info-text">Web Design</span></p>
+                      <p class="info-title">Photoshop for Web Design Beginners</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Type:</p>
+                      <p class="info-text">Standart</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Author:</p>
+                      <p class="info-title green">
+                        Aaron Jimenez
+                      </p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <div class="price">
+                        <span class="value">25</span>
+                        <button class="take-course">Take Course</button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="social">
+                    <li class="social__li">
+                      <a href="#" class="social__li__link in"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link tw"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link fb"></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- .course-card -->
+              </div>
+              <!-- .col-md3 col-sm-4 -->
+              <div class="col-md-3 col-sm-4">
+                <!-- .course-card -->
+                <div class="course-card">
+                  <div class="course-card__img">
+                    <img src="assets/img/angular.png" alt="">
+                    <div class="course-card__img__info">
+                      <ul class="stars">
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star"><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span class="taking">Taking course: <span class="taking-number">10 250</span></span>
+                    </div>
+                  </div>
+                  <div class="course-card__info">
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Subject: <span class="info-text">Web Design</span></p>
+                      <p class="info-title">Learn and Understand AnjularJS</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Type:</p>
+                      <p class="info-text">Standart</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Author:</p>
+                      <p class="info-title green">
+                        Jeffrey Morales
+                      </p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <div class="price">
+                        <span class="value">152</span>
+                        <button class="take-course">Take Course</button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="social">
+                    <li class="social__li">
+                      <a href="#" class="social__li__link in"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link tw"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link fb"></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- .course-card -->
+              </div>
+              <!-- .col-md3 col-sm-4 -->
+              <div class="col-md-3 col-sm-4">
+                <!-- .course-card -->
+                <div class="course-card">
+                  <div class="course-card__img">
+                    <img src="assets/img/photoshop3.png" alt="">
+                    <div class="course-card__img__info">
+                      <ul class="stars">
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star"><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span class="taking">Taking course: <span class="taking-number">35</span></span>
+                    </div>
+                  </div>
+                  <div class="course-card__info">
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Subject: <span class="info-text">Web Design</span></p>
+                      <p class="info-title">Photoshop for Web Design Beginners</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Type:</p>
+                      <p class="info-text">Standart</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Author:</p>
+                      <p class="info-title green">
+                        Aaron Jimenez
+                      </p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <div class="price">
+                        <span class="value">25</span>
+                        <button class="take-course">Take Course</button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="social">
+                    <li class="social__li">
+                      <a href="#" class="social__li__link in"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link tw"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link fb"></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- .course-card -->
+              </div>
+              <!-- .col-md3 col-sm-4 -->
+              <div class="col-md-3 col-sm-4">
+                <!-- .course-card -->
+                <div class="course-card">
+                  <div class="course-card__img">
+                    <img src="assets/img/fox.png" alt="">
+                    <div class="course-card__img__info">
+                      <ul class="stars">
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star"><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span class="taking">Taking course: <span class="taking-number">582</span></span>
+                    </div>
+                  </div>
+                  <div class="course-card__info">
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Subject: <span class="info-text">Web Design</span></p>
+                      <p class="info-title">Photoshop for Web Design Beginners</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Type:</p>
+                      <p class="info-text">Standart</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Author:</p>
+                      <p class="info-title green">
+                        Sandra Schmidt
+                      </p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <div class="price">
+                        <span class="value">25</span>
+                        <button class="take-course">Take Course</button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="social">
+                    <li class="social__li">
+                      <a href="#" class="social__li__link in"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link tw"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link fb"></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- .course-card -->
+              </div>
+              <!-- .col-md3 col-sm-4 -->
+              <div class="col-md-3 col-sm-4">
+                <!-- .course-card -->
+                <div class="course-card">
+                  <div class="course-card__img">
+                    <img src="assets/img/animals.png" alt="">
+                    <div class="course-card__img__info">
+                      <ul class="stars">
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star"><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span class="taking">Taking course: <span class="taking-number">35</span></span>
+                    </div>
+                  </div>
+                  <div class="course-card__info">
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Subject: <span class="info-text">Web Design</span></p>
+                      <p class="info-title">Photoshop for Web Design Beginners</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Type:</p>
+                      <p class="info-text">Standart</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Author:</p>
+                      <p class="info-title green">
+                        Aaron Jimenez
+                      </p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <div class="price">
+                        <span class="value">25</span>
+                        <button class="take-course">Take Course</button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="social">
+                    <li class="social__li">
+                      <a href="#" class="social__li__link in"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link tw"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link fb"></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- .course-card -->
+              </div>
+              <!-- .col-md3 col-sm-4 -->
+              <div class="col-md-3 col-sm-4">
+                <!-- .course-card -->
+                <div class="course-card">
+                  <div class="course-card__img">
+                    <img src="assets/img/trees.png" alt="">
+                    <div class="course-card__img__info">
+                      <ul class="stars">
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star"><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span class="taking">Taking course: <span class="taking-number">10 250</span></span>
+                    </div>
+                  </div>
+                  <div class="course-card__info">
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Subject: <span class="info-text">Web Design</span></p>
+                      <p class="info-title">Learn and Understand AnjularJS</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Type:</p>
+                      <p class="info-text">Standart</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Author:</p>
+                      <p class="info-title green">
+                        Jeffrey Morales
+                      </p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <div class="price">
+                        <span class="value">152</span>
+                        <button class="take-course">Take Course</button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="social">
+                    <li class="social__li">
+                      <a href="#" class="social__li__link in"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link tw"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link fb"></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- .course-card -->
+              </div>
+              <!-- .col-md3 col-sm-4 -->
+              <div class="col-md-3 col-sm-4">
+                <!-- .course-card -->
+                <div class="course-card">
+                  <div class="course-card__img">
+                    <img src="assets/img/owl.png" alt="">
+                    <div class="course-card__img__info">
+                      <ul class="stars">
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star _active-star"><i class="fa fa-star"></i></li>
+                        <li class="star"><i class="fa fa-star"></i></li>
+                      </ul>
+                      <span class="taking">Taking course: <span class="taking-number">35</span></span>
+                    </div>
+                  </div>
+                  <div class="course-card__info">
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Subject: <span class="info-text">Web Design</span></p>
+                      <p class="info-title">Photoshop for Web Design Beginners</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Type:</p>
+                      <p class="info-text">Standart</p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <p class="info-headl">Author:</p>
+                      <p class="info-title green">
+                        Aaron Jimenez
+                      </p>
+                    </div>
+                    <div class="course-card__info__row">
+                      <div class="price">
+                        <span class="value">25</span>
+                        <button class="take-course">Take Course</button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="social">
+                    <li class="social__li">
+                      <a href="#" class="social__li__link in"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link tw"></a>
+                    </li>
+                    <li class="social__li">
+                      <a href="#" class="social__li__link fb"></a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- .course-card -->
+              </div>
+              <!-- .col-md3 col-sm-4 -->
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--.wrapper-->
+    </body>
 
-</html>
+    </html>

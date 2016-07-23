@@ -1,5 +1,7 @@
+* {
+    box-sizing: border-box;
+}
 body {
-  box-sizing: border-box;
   margin: 0;
   width: 100%;
 }
@@ -15,4 +17,10 @@ button,input {
 img {
   width: 100%;
   height: auto;
+}
+ul {
+  padding-left: 0;
+}
+button {
+  border: none;
 }
