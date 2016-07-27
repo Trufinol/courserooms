@@ -1269,7 +1269,6 @@ button {
 }
 
 .profile-menu {
-  display: none;
   position: absolute;
   top: 42px;
   right: -10px;
@@ -1518,7 +1517,6 @@ button {
 }
 
 .inner-list {
-  display: none;
   position: absolute;
   top: 0;
   margin-left: 220px;
@@ -1552,7 +1550,6 @@ button {
 }
 
 .sidebar-right {
-  display: none;
   position: fixed;
   z-index: 1;
   top: 72px;

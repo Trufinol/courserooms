@@ -31,7 +31,7 @@
     color: $color-green;
 }
 .inner-list {
-  display: none;
+  // display: none;
   position: absolute;
   top: 0;
   margin-left: 220px;
@@ -61,7 +61,7 @@
 }
 
 .sidebar-right {
-  display: none;
+  // display: none;
   position: fixed;
   z-index: 1;
   top: 72px;
