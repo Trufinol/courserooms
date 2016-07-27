@@ -5,8 +5,8 @@ $(function() {
     max_postfix: "+",
     min: 20,
     max: 199,
-    from: 35,
-    to: 180,
+    from: 65,
+    to: 150,
     prefix: "$"
   });
 });
